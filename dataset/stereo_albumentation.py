@@ -146,7 +146,7 @@ class StereoTransform(BasicTransform):
             params["interpolation"] = self.interpolation
         if hasattr(self, "fill_value"):
             params["fill_value"] = self.fill_value
-        params.update({"cols": kwargs["left"].shape[1], "rows": kwargs["right"].shape[0]})
+        params.update({"cols": kwargs["image"].shape[1], "rows": kwargs["image"].shape[0]})
         return params
 
 
